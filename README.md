@@ -16,3 +16,9 @@ https://elthen.itch.io/2d-pixel-art-cat-sprites
 
 - Toggle breath animations
 - Customize cat type
+- Scale window
+- Save position
+- Lock position
+- Hide timer/button
+- Purr mode on/off
+- Remove MacOs border radius
