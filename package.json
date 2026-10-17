@@ -22,10 +22,10 @@
       "icon": "assets/icon_large.ico"
     },
     "mac": {
-       "target": "dmg",
-       "icon": "assets/icon_large.png",
-       "category": "public.app-category.productivity"
-     },
+      "target": "dmg",
+      "icon": "assets/icon_large.png",
+      "category": "public.app-category.productivity"
+    },
     "nsis": {
       "installerIcon": "assets/icon_large.png",
       "uninstallerIcon": "assets/icon_large.png"
