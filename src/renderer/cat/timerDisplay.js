@@ -1,0 +1,1 @@
+//timerDisplay.js renders the time and the start/stop buttons.

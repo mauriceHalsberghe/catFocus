@@ -1,0 +1,7 @@
+//base.css has common styles and variables.
+
+:root {
+  --primary: #ffa5e5; /* fallback until settings load */
+  --secondary: #26001b;
+}
+

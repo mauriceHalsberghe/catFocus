@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Cat Settings</title>
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="settings.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Settings</h1>
+
+  <main>
+
+    <div>
+      <h2>Timers</h2>
+      <label class="row">
+        <span>Focus Time</span>
+        <input type="number" id="focusTime" min="5" max="100" step="5" required class="input_number">
+      </label>
+  
+      <label class="row">
+        <span>Pause Time</span>
+        <input type="number" id="pauseTime" min="1" max="15" step="1" required class="input_number">
+      </label>
+    </div>
+
+    <div>
+      <h2>Colors</h2>
+      <label class="row">
+        <span>Primary</span>
+        <input type="color" id="primaryColor" class="input_color">
+      </label>
+  
+      <label class="row">
+        <span>Secondary</span>
+        <input type="color" id="secondaryColor" class="input_color">
+      </label>
+    </div>
+
+    <div>
+      <h2>Sounds</h2>
+      <label class="row">
+        <span>Meow</span>
+        <input type="checkbox" id="meowEnabled">
+      </label>
+    </div>
+
+    <div class="buttons">
+      <span id="settings-status" role="status" aria-live="polite"></span>
+      <button id="save-settings" type="button">Save</button>
+    </div>
+
+  </main>
+
+  <script type="module" src="settings.js"></script>
+</body>
+</html>

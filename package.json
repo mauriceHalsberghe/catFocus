@@ -1,0 +1,45 @@
+{
+  "name": "CatFocus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.mauriceh.catfocus",
+    "productName": "CatFocus",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon_large.ico"
+    },
+    "mac": {
+       "target": "dmg",
+       "icon": "assets/icon_large.png",
+       "category": "public.app-category.productivity"
+     },
+    "nsis": {
+      "installerIcon": "assets/icon_large.png",
+      "uninstallerIcon": "assets/icon_large.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "get-windows": "^9.3.0"
+  }
+}

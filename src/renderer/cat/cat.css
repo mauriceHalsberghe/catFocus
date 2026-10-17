@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: transparent;
+  overflow: hidden;
+  font-family: "Silkscreen", sans-serif;
+  text-align: center;
+}
+
+html:hover .btn {
+  opacity: 1;
+}
+ 
+
+/* -------- CAT -------- */
+
+@property --p {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes breathe { to { --p: 1; } }
+
+#cat {
+  --frames: 4;
+  --total: 3;
+  --hold: 2;
+
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 25px;
+  background-repeat: no-repeat;
+
+  animation: breathe calc(var(--total) * 1s) linear infinite;
+
+  background-position-x: calc(
+    clamp(
+      0,
+      1 + round(down,
+        (var(--p) * var(--total) - var(--hold)) / (var(--total) - var(--hold)) * (var(--frames) - 1),
+        1),
+      var(--frames) - 1
+    ) * -100px
+  );
+}
+
+/* -------- BUTTONS -------- */
+
+.buttons {
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 4px;
+  z-index: 999;
+
+  .btn {
+    background-color: var(--primary);
+    border: none;
+    color: var(--secondary);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.15s;
+    -webkit-app-region: no-drag;
+    box-shadow: 0px 0px 6px 0 #00000050;
+    border-radius: 0.25rem;
+  }
+
+  .btn i {
+    font-size: 14px;
+  }
+}
+
+/* -------- TIMER -------- */
+
+.timer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  text-align: center;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  pointer-events: none;
+}
+
+.timer-start {
+  padding: 0 0.25rem;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  pointer-events: auto;
+}

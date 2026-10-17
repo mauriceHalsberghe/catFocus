@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="cat.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="buttons">
+    <button class="btn" id="settings" aria-label="Settings" title="Settings">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <button class="btn close-btn" id="close" aria-label="Close" title="Close">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div id="cat"></div>
+
+  <div id="timer" class="timer">
+    <span id="timer-time" hidden></span>
+    <button id="timer-focus" class="timer-start" type="button">Start</button>
+    <button id="timer-pause" class="timer-start" type="button" hidden>Pause</button>
+  </div>
+  
+  <script type="module" src="cat.js"></script>
+</body>
+</html>
